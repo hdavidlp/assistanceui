@@ -114,7 +114,7 @@ const RequestNewPeriod =()=>{
 
 	return (
 		<div className="request-container" >
-			<div className="request-head-container">Request a new Period</div>
+			<div className="request-head-container">Request new Period</div>
 			<div className="request-body-container">
 				<form>
 					<div className="mb-3">

@@ -9,7 +9,7 @@ const CourseTableBody = ({courses}) => {
 	return (
 		<tbody>
 			{courses?.data?.map((course) => (
-				<CourseLongDetailRow course = {course} />
+				<CourseLongDetailRow key={course.courseID} course = {course} />
 			))}
 		</tbody>
 	)

@@ -8,6 +8,7 @@ import StudentsShortTable from './Components/Students/ShortTableDetails/Students
 
 
 import RequestNewPeriod from './Components/Period/Insert/RequestNewPeriod';
+import RequestNewCourse from './Components/Courses/Insert/RequestNewCourse';
 
 
 
@@ -15,10 +16,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <RequestNewCourse />
+        <CoursesShortTable />
 
-        <RequestNewPeriod />
+        {/*<RequestNewPeriod />
         <PeriodsShortTable />
-        {/*<GroupsShortTable />
+        <GroupsShortTable />
         <CoursesShortTable />
         <StudentsShortTable /> */}
       </header>
