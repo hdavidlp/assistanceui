@@ -7,16 +7,20 @@ import GroupsShortTable from './Components/Groups/ShortTableDetails/GroupsShortT
 import StudentsShortTable from './Components/Students/ShortTableDetails/StudentsShortTable';
 
 
+import RequestNewPeriod from './Components/Period/Insert/RequestNewPeriod';
+
 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+
+        <RequestNewPeriod />
         <PeriodsShortTable />
-        <GroupsShortTable />
+        {/*<GroupsShortTable />
         <CoursesShortTable />
-        <StudentsShortTable />
+        <StudentsShortTable /> */}
       </header>
     </div>
   );

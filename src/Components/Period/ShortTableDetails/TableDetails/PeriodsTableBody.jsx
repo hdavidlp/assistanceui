@@ -5,7 +5,7 @@ function PeriodsTableBody({periods}) {
   return (
     <tbody>
         {periods?.data?.map((period) =>(
-            <RowLongDetail period = {period} />
+            <RowLongDetail key={period.periodID} period = {period} />
         ))}
     </tbody>
   )

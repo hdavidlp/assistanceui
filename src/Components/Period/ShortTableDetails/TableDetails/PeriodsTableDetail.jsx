@@ -7,7 +7,7 @@ import PeriodsTableBody from './PeriodsTableBody'
 function PeriodsTableDetail({periods}) {
   return (
     <div className='container'>
-        <table class="table table-hover">
+        <table className="table table-hover">
           <PeriodTableHeader />
           <PeriodsTableBody periods={periods}/>
         </table>
