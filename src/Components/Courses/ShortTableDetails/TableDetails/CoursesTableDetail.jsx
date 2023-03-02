@@ -6,13 +6,13 @@ import CourseTableBody from "./CourseTableBody"
 
 
 
-const CoursesTableDetail = ({courses}) => {
+const CoursesTableDetail = ({courses, selectCourseToEdit, selectCourseToDelete} ) => {
 
 	return(
 		<div className="container">
 			<table className="table table-hover">
 				<CourseTableHeader />
-				<CourseTableBody courses={courses} />
+				<CourseTableBody courses={courses} selectCourseToEdit={selectCourseToEdit} selectCourseToDelete={selectCourseToDelete} />
 			</table>
 		</div>
 	)

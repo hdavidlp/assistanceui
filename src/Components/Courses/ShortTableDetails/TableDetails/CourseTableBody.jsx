@@ -3,13 +3,17 @@ import React from "react"
 import CourseLongDetailRow from "./CourseLongDetailRow"
 
 
-const CourseTableBody = ({courses}) => {
+const CourseTableBody = ({courses, selectCourseToEdit, selectCourseToDelete}) => {
 
 
 	return (
 		<tbody>
-			{courses?.data?.map((course) => (
-				<CourseLongDetailRow key={course.courseID} course = {course} />
+			{courses?.map((course) => (
+				<CourseLongDetailRow 
+					key={course.courseID} 
+					course = {course} 
+					selectCourseToEdit = {selectCourseToEdit}
+					selectCourseToDelete={selectCourseToDelete}/>
 			))}
 		</tbody>
 	)

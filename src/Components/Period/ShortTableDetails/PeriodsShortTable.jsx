@@ -51,7 +51,8 @@ const PeriodsShortTable = () => {
 	
   return (
     <div>
-      <h1 className='text-center'>Periods</h1> 
+		<div className='clear-fix'></div>
+      	<h1 className='text-center'>Periods</h1> 
         {hasData&& <PeriodsTableDetail periods={periods}/>}
         <div className='col text-center'>
         <Button className='button' onClick={loadPeriods} disabled={isLoading} >{isLoading ? 'Loading...':'Reload Periods'}</Button>

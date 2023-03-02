@@ -25,6 +25,8 @@ import { PeriodRoutes } from './Components/Period/Routes/PeriodRoutes';
 import { CourseRoutes } from './Components/Courses/Routes/CourseRoutes';
 import { GroupRoutes } from './Components/Groups/Routes/GroupRoutes';
 import { StudentRoutes } from './Components/Students/Routes/StudentRoutes';
+import MainMenu from './Components/Shared/MainMenu/MainMenu';
+import { AllInOneRoutes } from './Components/AllInOne/Routes/AllINOneRoutes';
 
 function App() {
   return (
@@ -33,16 +35,8 @@ function App() {
         <header>
           <h1>Assistance</h1>
         </header>
-        <nav>
-          <ul>
-            <li><Link to={'/'}>Home</Link> </li>
-            <li> <Link to={'/periods'}>Periods</Link></li>
-            <li><Link to={'/courses'}>Courses</Link></li>
-            <li><Link to={'/groups'}>Groups</Link></li>
-            <li><Link to={'/students'}>Students</Link></li>
-            <li><Link to={'/students'}>Extra</Link></li>
-          </ul>
-        </nav>
+        
+        <MainMenu />
         
         <div className='clear-fix'></div>
       
@@ -54,6 +48,7 @@ function App() {
             <Route path='/courses/*' element={<CourseRoutes />} />
             <Route path='/groups/*' element={<GroupRoutes />}/>
             <Route path='/students/*' element={<StudentRoutes />}/>
+            <Route path='/allinone/*' element={<AllInOneRoutes />}/>
 
             {/*<Route path='/courses/*' element={<CoursesLayout />} />*/}
 
@@ -68,16 +63,12 @@ function App() {
 
         </section>
 
-        <aside>
-          <h4>Barra lateral</h4>
-          
 
-        </aside>
 
         <div className='clear-fix'></div>
 
         <footer>
-          OMG
+          Fin de la aplicacion
         </footer>
       </div>
       

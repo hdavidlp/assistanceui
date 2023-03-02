@@ -8,6 +8,7 @@ const CourseTableHeader = () => {
 			<tr>
 				<th scope="col">Course ID</th>
 				<th scope="col">Name</th>
+				<th scope="col">Actions</th>
 			</tr>
 		</thead>
 	)

@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import '../../css/baseExtra.css'
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -13,6 +13,7 @@ const RequestNewCourse =() =>{
     const [data,setData ] = useState('')
     const [isSaving, setSaving] = useState(false)
     const [readyToSave, setReadyToSave] = useState(false)
+    const navigate = useNavigate()
 
     function simulateNetworkRequest() {
 		return new Promise((resolve) => setTimeout(resolve, 2000));
@@ -34,6 +35,7 @@ const RequestNewCourse =() =>{
         .then(()=>{
             console.log ('Data saved')
             setSaving(false)
+            navigate('/Courses')
         })
         .catch((error)=>{
             console.log ('Save error detected')

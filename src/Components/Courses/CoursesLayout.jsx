@@ -5,8 +5,9 @@ export function CoursesLayout  () {
 
 	return(
 		<div className="container">
-			<Link to={'/courses'}>List Courses</Link>
-			<Outlet />
+			{/* <Link to={'/courses'}>List Courses</Link>
+			<Link to={'/new'}>Add course</Link>
+			<Outlet /> */}
 		</div>
 	)
 }

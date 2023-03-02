@@ -1,5 +1,6 @@
 import React  from "react";
 import { useState, useEffect } from "react";
+import {useNavigate} from 'react-router-dom';
 import _defaultMaxTime, {_APIAssistence} from '../../../API/APIConfig'
 import '../../css/baseExtra.css'
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -23,6 +24,7 @@ const RequestNewPeriod =()=>{
 	const [data, setData] = useState(initValues)
 	const [isReadyToSave, setReadyToSave] = useState(false)
 	const [isSaving, setSaving] = useState(false)
+	const navigate = useNavigate()
 
 	function simulateNetworkRequest() {
 		return new Promise((resolve) => setTimeout(resolve, 2000));
@@ -39,14 +41,19 @@ const RequestNewPeriod =()=>{
 
 	},[isSaving])
 
-	const Save = () =>{
-		axios.post(_APIAssistence + 'Period',{
+	const Save = async() =>{
+		await axios.post(_APIAssistence + 'Period',{
 			shortDescription: data['shortDescription'],
 			longDescription : data['longDescription']
 		})
 		.then(()=>{
-			console.log('salvado')
+			
 			setSaving(false)
+			console.log('salvado antes de redireccionar')
+			navigate('/Periods')
+			
+			console.log('Despues del navigate')
+			
 		})
 		.catch(()=>{
 			console.log('error en guarar')
