@@ -4,13 +4,13 @@ import StudentTableHeader	from './StudentsTableHeader'
 import StudentTableBody from './StudentsTableBody'
 
 
-const StudentsTableDetail = ({students}) => {
+const StudentsTableDetail = ({students, selectStudentToEdit, selectStudentToDelete}) => {
 
 	return (
 		<div className='container'>
 			<table className='table table-hover'>		
 				<StudentTableHeader />
-				<StudentTableBody students={students}/>
+				<StudentTableBody students={students} selectStudentToEdit={selectStudentToEdit} selectStudentToDelete={selectStudentToDelete}/>
 			</table>
 		</div>
 	)

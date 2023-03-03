@@ -3,11 +3,11 @@ import React from 'react'
 import StudentShortDetailRow from './StudentShortDetailRow'
 
 
-const StudentTableBody = ({students}) => {
+const StudentTableBody = ({students, selectStudentToEdit, selectStudentToDelete}) => {
 	return (
 		<tbody>
-			{students?.data?.map((student) => (
-				<StudentShortDetailRow student={student}/>
+			{students?.map((student) => (
+				<StudentShortDetailRow student={student} selectStudentToEdit={selectStudentToEdit} selectStudentToDelete={selectStudentToDelete}/>
 			))}
 				
 		</tbody>
